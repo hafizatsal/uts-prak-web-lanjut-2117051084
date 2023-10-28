@@ -1,67 +1,58 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ID Card</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Profile</title>
     <style>
-        .id-card {
-            background-color: #3498db; /* Ubah warna latar belakang */
-            color: #fff; /* Ubah warna teks */
-            max-width: 300px;
-            margin: 0 auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        /* CSS untuk mengatur tampilan */
+        body {
+            font-family: Arial, sans-serif;
         }
-
-        .profil-img {
+        
+        .profile-container {
+            width: 300px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .profile-image {
             width: 150px;
             height: 150px;
-            border-radius: 50%;
-            border: 4px solid #fff; /* Ubah warna bingkai foto profil */
-            margin: 0 auto;
-            display: block;
+            border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+            object-fit: cover; /* Memastikan gambar sesuai dalam lingkaran */
+            margin: 25px ;
+            border: 2px solid black;
         }
 
-        .info-box {
-            background-color: #fff; /* Ubah warna latar belakang info-box */
-            color: #333; /* Ubah warna teks info-box */
-            border: 1px solid #ccc;
+        .profile-item {
+            background-color: #f0f0f0;
             padding: 10px;
-            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+        }
+        
+        .profile-label {
+            font-weight: bold;
         }
     </style>
 </head>
+<body> -->
+<?= $this->extend('layouts/app.php') ?>
 
-<body>
-    <div class="container mt-5">
-        <div class="id-card">
-            <div class="text-center">
-                <img src="https://th.bing.com/th/id/OIP.OesLvyzDO6AvU_hYUAT4IAHaHa?pid=ImgDet&rs=1" alt="Profil"
-                    class="profil-img">
-            </div>
-            <div class="text-center mt-3">
-                <div class="info-box">
-                    <h5>
-                        <?= $nama ?>
-                    </h5>
-                </div>
-                <div class="info-box">
-                    <h5>
-                        <?= $kelas ?>
-                    </h5>
-                </div>
-                <div class="info-box">
-                    <h5>
-                        <?= $npm ?>
-                    </h5>
-                </div>
-            </div>
-        </div>
+<?= $this->section('content') ?>
+
+<div class="profile-container">
+    <div class="w-100 d-grid border gap-2" style="height: 50vh; place-content: center;">
+     <div class="profile-image">
+        <img src="<?= $user['foto'] ?? base_url("assets/img/PicProfile.png")  ?>"
+        width="100%" height="100%" alt="profil" class="profile-item">
     </div>
-</body>
-
-</html>
+    <div class="profile-label dark-text"><?= $user['nama'] ?></div>
+    <div class="profile-label light-text"><?= $user['npm'] ?></div>
+    <div class="profile-label dark-text"><?= $user['nama_kelas'] ?></div>
+    </div>
+    </div>
+    <?= $this->endSection() ?>
+<!--</body>
+</html> -->

@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #d84315;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.profile-container {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white; /* Warna latar belakang kontainer profil */
+    padding: 20px; /* Ruang antara kontainer dan elemen profil */
+    border-radius: 10px; /* Sudut kontainer yang dibulatkan */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Bayangan kontainer */
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Membuat gambar menjadi lingkaran */
+    object-fit: cover; /* Memastikan gambar sesuai dalam lingkaran */
+    margin: 15px auto; /* Pusatkan gambar secara horizontal */
+    border: 4px solid #fd0000; /* Garis pinggiran tebal dan berwarna gelap */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.profile-item {
+    width: 100%;
+    height: auto;
+}
+
+.profile-label {
+    font-weight: bold;
+    color: #333; /* Warna teks yang lebih gelap */
+}
+
+/* Stil untuk teks berwarna gelap pada latar belakang terang */
+.dark-text {
+    color: #ff0000;
+}
+
+/* Stil untuk teks berwarna terang pada latar belakang gelap */
+.light-text {
+    color: #6100fd;
+}
